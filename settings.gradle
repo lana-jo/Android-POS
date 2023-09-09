@@ -1,0 +1,24 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "POS"
+include ':app'
+
+
+
+include ':DialogSheet'
+include ':AssetMedia'
+
+project(':DialogSheet').projectDir = new File('../common-module/DialogSheet')
+project(':AssetMedia').projectDir = new File('../common-module/AssetMedia')
