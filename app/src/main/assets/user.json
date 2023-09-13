@@ -1,10 +1,31 @@
 [
 {
+  "id" : 1,
+  "nama" : "ini admin",
   "phone" : "085866638153",
   "pin" : "123456",
   "role" : 1
 },
 {
+  "id" : 2,
+  "outlet":"outlet1",
+  "nama" : "ini user1",
+  "phone" : "085105757760",
+  "pin" : "123456",
+  "role" : 2
+},
+{
+  "id" : 3,
+  "outlet":"outlet1",
+  "nama" : "ini user2",
+  "phone" : "085105757760",
+  "pin" : "123456",
+  "role" : 2
+},
+{
+  "id" : 4,
+  "outlet":"outlet1",
+  "nama" : "ini user2",
   "phone" : "085105757760",
   "pin" : "123456",
   "role" : 2

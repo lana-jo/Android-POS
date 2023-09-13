@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">POS</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="outlet">Outlet</string>
+    <string name="employee">Employees</string>
+    <string name="title_attention">Confirmation</string>
+    <string name="title_warning">Maaf</string>
+    <string name="title_yes">Ya</string>
+    <string name="title_no">Tidak</string>
+    <string name="title_information">Informasi</string>
+    <string name="title_close">Tutup</string>
 </resources>

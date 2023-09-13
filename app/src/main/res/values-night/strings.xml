@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard">Dashboard</string>
+    <string name="outlet">Outlet</string>
+    <string name="title_attention">Confirmation</string>
+    <string name="title_warning">Maaf</string>
+    <string name="title_yes">Ya</string>
+    <string name="title_no">Tidak</string>
+    <string name="title_information">Informasi</string>
+    <string name="title_close">Tutup</string>
+</resources>
