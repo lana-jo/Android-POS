@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "status": 1,
+    "seller" : "user 2",
+    "metode" : "cash",
+    "outlet" : "outlet 1",
+    "tanggal": "21/09/2023",
+    "transaksi": "100000"
+  },{
+    "id": 1,
+    "status": 1,
+    "seller" : "user 2",
+    "metode" : "cash",
+    "outlet" : "outlet 1",
+    "tanggal": "22/09/2023",
+    "transaksi": "200000"
+  },{
+    "id": 1,
+    "status": 1,
+    "seller" : "user 2",
+    "metode" : "cash",
+    "outlet" : "outlet 1",
+    "tanggal": "23/09/2023",
+    "transaksi": "300000"
+  },{
+    "id": 1,
+    "status": 1,
+    "seller" : "user 2",
+    "metode" : "cash",
+    "outlet" : "outlet 1",
+    "tanggal": "24/09/2023",
+    "transaksi": "400000"
+  },{
+    "id": 1,
+    "status": 1,
+    "seller" : "user 2",
+    "metode" : "cash",
+    "outlet" : "outlet 1",
+    "tanggal": "25/09/2023",
+    "transaksi": "500000"
+  },
+  {
+    "id": 2,
+    "status": 2,
+    "metode" : "cash",
+    "seller" : "user 1",
+    "outlet" : "outlet 1",
+    "tanggal": "21/09/2023",
+    "transaksi": "200000"
+  }
+]

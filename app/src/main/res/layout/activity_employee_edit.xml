@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".employee.EmployeeEditActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/action_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_primary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/employee_btn_back"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:contentDescription="@string/back"
+            android:src="@drawable/ic_back_arrow"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toBottomOf="@+id/employeeSave"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/employeeSave"
+            app:tint="@color/white" />
+
+        <TextView
+            android:id="@+id/employeeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:fontFamily="@font/roboto_bold"
+            android:padding="8dp"
+            android:text="@string/employee_add"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/employeeSave"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/shape_background_rounded_white"
+            android:backgroundTint="@color/green_haze"
+            android:drawableStart="@drawable/ic_save"
+            android:drawablePadding="8dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/roboto_bold"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:text="@string/employee_save"
+            android:textColor="@color/white"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/employeeTitle" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/action_bar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/color_primary"
+                android:paddingStart="16dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="24dp">
+
+                <com.mikhaellopez.circularimageview.CircularImageView
+                    android:id="@+id/employee_user_image"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    app:civ_border="false"
+                    app:civ_border_width="1dp"
+                    app:civ_circle_color="@color/color_info_soft"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/avatar_face_man" />
+
+                <ImageView
+                    android:id="@+id/employee_user_image_button"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:background="@drawable/shape_button_circle"
+                    android:backgroundTint="@color/green_haze"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_camera"
+                    app:layout_constraintBottom_toBottomOf="@+id/employee_user_image"
+                    app:layout_constraintEnd_toEndOf="@+id/employee_user_image"
+                    tools:ignore="ContentDescription" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/employeeNameTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_name_title"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employeeName"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:inputType="text|textCapWords|textNoSuggestions"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/employeeNameTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeNameTitle"
+                    tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/employeeAlamatTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_address_title"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/employeeNameTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeName" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employeeAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:inputType="text|textCapWords|textMultiLine|textNoSuggestions"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeName"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/employeeName"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeAlamatTitle"
+                    tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/kotaTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_city_title"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/employeeAlamatTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeAddress" />
+
+                <TextView
+                    android:id="@+id/employeeCity"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/shape_input_background"
+                    android:ellipsize="end"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:maxLines="1"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toStartOf="@+id/employeeState"
+                    app:layout_constraintStart_toStartOf="@+id/kotaTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/kotaTitle" />
+
+                <TextView
+                    android:id="@+id/provinsi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_state_title"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/kotaTitle"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/kotaTitle"
+                    app:layout_constraintTop_toTopOf="@+id/kotaTitle" />
+
+                <TextView
+                    android:id="@+id/employeeState"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/employeeCity"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeAddress"
+                    app:layout_constraintStart_toStartOf="@+id/provinsi"
+                    app:layout_constraintTop_toBottomOf="@+id/kotaTitle" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_phone_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/kotaTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeCity" />
+
+                <TextView
+                    android:id="@+id/employeePhone"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_input_background"
+                    android:editable="false"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeAddress"
+                    app:layout_constraintStart_toStartOf="@+id/employeeAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4"
+                    tools:ignore="Deprecated" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_birth_place_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/kotaTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeePhone" />
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/employeeBirthPlace"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeAddress"
+                    app:layout_constraintStart_toStartOf="@+id/employeeAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/textView5"
+                    tools:ignore="SpeakableTextPresentCheck,VisualLintTextFieldSize" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_birth_date_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toStartOf="@+id/kotaTitle"
+                    app:layout_constraintTop_toBottomOf="@+id/employeeBirthPlace" />
+
+                <TextView
+                    android:id="@+id/employeeBirthDate"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:drawableEndCompat="@drawable/ic_edit_calendar_24"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeCity"
+                    app:layout_constraintStart_toStartOf="@+id/employeeAddress"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="@string/employee_gender_title"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView6"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textView6"
+                    app:layout_constraintTop_toTopOf="@+id/textView6" />
+
+                <TextView
+                    android:id="@+id/employeeGender"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@drawable/shape_input_background"
+                    android:fontFamily="@font/roboto_bold"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/employeeBirthDate"
+                    app:layout_constraintEnd_toEndOf="@+id/employeeState"
+                    app:layout_constraintStart_toStartOf="@+id/textView7"
+                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

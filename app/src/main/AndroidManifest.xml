@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -16,21 +17,39 @@
         android:theme="@style/Theme.POS"
         tools:targetApi="31">
         <activity
+            android:name=".product.ProductEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".transaction.TransactionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".product.ProductActivity"
+            android:exported="false" />
+        <activity
+            android:name=".outlet.OutletEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".employee.EmployeeEditActivity"
+            android:exported="false" />
+        <activity
+            android:name=".cashier.CashierActivity"
+            android:exported="false" />
+        <activity
             android:name=".userdashboard.UserDashboardActivity"
             android:exported="false" />
         <activity
             android:name=".admindashboard.AdminDashboardActivity"
-            android:exported="false" />
-        <activity
-            android:name=".LoginActivity"
-            android:exported="true"
-            android:windowSoftInputMode="adjustPan">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
         <activity
             android:name=".MainActivity"
             android:exported="false" />

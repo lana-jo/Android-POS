@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <group android:checkableBehavior="single">
     <item
         android:id="@+id/dashboard"
         android:checkable="true"
@@ -12,10 +14,39 @@
         android:icon="@drawable/ic_store"
         android:iconTint="@color/black"
         android:title="@string/outlet" />
+        <item
+        android:id="@+id/product"
+        android:checkable="true"
+        android:icon="@drawable/ic_product_list"
+        android:iconTint="@color/black"
+        android:title="@string/product" />
     <item
         android:id="@+id/employees"
         android:checkable="true"
         android:icon="@drawable/ic_employee"
         android:iconTint="@color/black"
         android:title="@string/employee" />
+    </group>
+
+    <item android:title=""/>
+    <item android:title=""/>
+
+    <item
+        android:id="@+id/main_item"
+        android:title="Your Account">
+        <menu>
+            <item
+                android:id="@+id/setting"
+                android:icon="@drawable/ic_setting"
+                android:title="Setting"
+                android:checkable="true"
+                app:showAsAction="ifRoom"/>
+            <item
+                android:id="@+id/logout"
+                android:icon="@drawable/ic_logout"
+                android:title="Logout"
+                android:checkable="true"
+                app:showAsAction="ifRoom"/>
+        </menu>
+    </item>
 </menu>

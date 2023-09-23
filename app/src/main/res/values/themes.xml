@@ -1,9 +1,11 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.POS" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.POS" parent="Theme.Material3.Light.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!-- <product name="colorPrimary">@color/my_light_primary</product> -->
     </style>
 
     <style name="Theme.POS" parent="Base.Theme.POS" />
+
+<!--    <product name="android:windowTranslucentStatus">true</product>-->
 </resources>

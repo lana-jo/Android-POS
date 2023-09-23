@@ -10,6 +10,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 rootProject.name = "POS"
@@ -19,6 +20,7 @@ include ':app'
 
 include ':DialogSheet'
 include ':AssetMedia'
+
 
 project(':DialogSheet').projectDir = new File('../common-module/DialogSheet')
 project(':AssetMedia').projectDir = new File('../common-module/AssetMedia')

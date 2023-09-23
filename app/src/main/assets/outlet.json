@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "outlet 1",
+    "address": "Jl. Menoreh Raya No.76a, Bendan Duwur, Kec. Gajahmungkur, Kota Semarang, Jawa Tengah 50235",
+    "outlet_user": 21
+  },
+  {
+    "id": 2,
+    "name": "outlet 2",
+    "address": "Jl. Tlogosari Raya II No.21, Tlogosari Kulon, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50196",
+    "outlet_user": 22
+  },
+  {
+    "id": 3,
+    "name": "outlet 3",
+    "address": "Jl. KaranganyarNo.578, Brumbumgan, Gabahan, Semarang Tengah, Semarang City, Central Java 50135",
+    "outlet_user": 23
+  },
+  {
+    "id": 4,
+    "name": "outlet 4",
+    "address": "Jl. Jati Raya, Srondol Wetan, Kec. Banyumanik, Kota Semarang, Jawa Tengah 50263",
+    "outlet_user": 24
+  }
+]

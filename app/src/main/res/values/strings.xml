@@ -9,4 +9,26 @@
     <string name="title_no">Tidak</string>
     <string name="title_information">Informasi</string>
     <string name="title_close">Tutup</string>
+    <string name="dummy_tittle">Your Company</string>
+    <string name="save">Save</string>
+    <string name="back">Back</string>
+    <string name="update">Update</string>
+    <string name="employee_edit">Edit Employee</string>
+    <string name="employee_save">Save</string>
+    <string name="employee_add">Add Employee</string>
+    <string name="employee_gender_title">Gender</string>
+    <string name="employee_birth_date_title">Birth Date</string>
+    <string name="employee_address_title">Addres</string>
+    <string name="employee_birth_place_title">Birth Place</string>
+    <string name="employee_phone_title">Phone</string>
+    <string name="employee_state_title">State</string>
+    <string name="employee_city_title">City</string>
+    <string name="employee_name_title">Name</string>
+    <string name="outlet_add">Add Outlet</string>
+    <string name="outlet_edit">Edit Outlet</string>
+    <string name="total_penjualan_item_title">Penjualan</string>
+    <string name="total_transaksi_item_title">Transaksi</string>
+    <string name="total_laba_rugi_item_title">Laba Rugi</string>
+    <string name="total_laba_bersih_item_title">Laba Bersih</string>
+    <string name="product">Product</string>
 </resources>

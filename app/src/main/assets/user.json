@@ -1,33 +1,43 @@
 [
 {
   "id" : 1,
-  "nama" : "ini admin",
+  "name" : "ini admin",
   "phone" : "085866638153",
+  "email" : "dummy@email.com",
   "pin" : "123456",
   "role" : 1
 },
 {
   "id" : 2,
+  "email" : "dummy@email.com",
   "outlet":"outlet1",
-  "nama" : "ini user1",
+  "name" : "ini user1",
   "phone" : "085105757760",
   "pin" : "123456",
+  "address":"dummy Alamat",
+  "position" : "cashier",
   "role" : 2
 },
 {
   "id" : 3,
+  "email" : "dummy@email.com",
   "outlet":"outlet1",
-  "nama" : "ini user2",
+  "name" : "ini user2",
   "phone" : "085105757760",
   "pin" : "123456",
+  "address":"dummy Alamat",
+  "position" : "cashier",
   "role" : 2
 },
 {
   "id" : 4,
+  "email" : "dummy@email.com",
   "outlet":"outlet1",
-  "nama" : "ini user2",
+  "name" : "ini user2",
   "phone" : "085105757760",
   "pin" : "123456",
+  "address":"dummy Alamat",
+  "position" : "cashier",
   "role" : 2
 }
 ]
