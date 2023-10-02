@@ -46,7 +46,7 @@ class OutletEditActivity : AppCompatActivity() {
 			binding.outletSave.text = "Save"
 			binding.outletSave.setOnClickListener {
 				showInformationDialog("attention", "Data Successfully Saved")
-				viewModel.inputFile()
+				viewModel.inputFile(model)
 				save()
 			}
 		} else {
@@ -54,7 +54,7 @@ class OutletEditActivity : AppCompatActivity() {
 			binding.outletSave.text = "Update"
 			binding.outletSave.setOnClickListener {
 				showInformationDialog("attention", "Data Successfully Updated")
-				viewModel.inputFile()
+				viewModel.inputFile(model)
 				save()
 
 			}

@@ -20,13 +20,13 @@ class ProductAdapter (private val productListener: ProductListener) : RecyclerVi
 	inner class ViewHolder(item: LayoutItemBarangBinding) : RecyclerView.ViewHolder(item.root) {
 		private val binding = item
 
-		fun setBinding(item: ProductModel) {
+		fun setBinding(item: ProductModel, listener: ProductListener) {
 			binding.itemName.text = item.name
 			binding.itemPrice.text = item.price?.let { formatRupiah(it.toDouble()) }
 			binding.itemQuantity.text = String.format("Quantity: %s", item.quantity)
-			/*binding.itemContainer.setOnClickListener {
-//				itemListener.onClick()
-			}*/
+			binding.itemContainer.setOnClickListener {
+				listener.onClick(item)
+			}
 		}
 	}
 
@@ -46,7 +46,7 @@ class ProductAdapter (private val productListener: ProductListener) : RecyclerVi
 	}
 
 	override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-		holder.setBinding(itemList[position])
+		holder.setBinding(itemList[position], productListener)
 	}
 
 	@SuppressLint("NotifyDataSetChanged")

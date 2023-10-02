@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.antohuang.dialogsheet.DialogSheet
 import com.bnn.pos.R
-import com.bnn.pos.databinding.ActivityItemEditBinding
+import com.bnn.pos.databinding.ActivityProductEditBinding
 import com.bnn.pos.databinding.LayoutDialogConfirmationBinding
 import com.bnn.pos.databinding.LayoutDialogInformationBinding
 
@@ -13,10 +13,11 @@ class ProductEditActivity : AppCompatActivity() {
 	private var dialogSheet: DialogSheet? = null
 	private var confirmationDialog: DialogSheet? = null
 
-	private lateinit var binding: ActivityItemEditBinding
+	private lateinit var binding: ActivityProductEditBinding
 	override fun onCreate(savedInstanceState: Bundle?) {
 		super.onCreate(savedInstanceState)
-		setContentView(R.layout.activity_item_edit)
+		binding = ActivityProductEditBinding.inflate(layoutInflater)
+		setContentView(binding.root)
 
 		var can: Int = intent.getIntExtra("can", 0)
 

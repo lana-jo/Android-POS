@@ -31,4 +31,5 @@
     <string name="total_laba_rugi_item_title">Laba Rugi</string>
     <string name="total_laba_bersih_item_title">Laba Bersih</string>
     <string name="product">Product</string>
+    <string name="product_add">Add Product</string>
 </resources>

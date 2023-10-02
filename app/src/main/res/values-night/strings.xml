@@ -25,4 +25,5 @@
     <string name="outlet_add">Add Outlet</string>
     <string name="outlet_edit">Edit Outlet</string>
     <string name="product">Product</string>
+    <string name="product_add">Add Product</string>
 </resources>

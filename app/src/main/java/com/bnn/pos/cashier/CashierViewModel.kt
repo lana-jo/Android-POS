@@ -14,7 +14,7 @@ class CashierViewModel (application: Application) : AndroidViewModel(application
 
 
 	fun getData(){
-		val json = readFromAssets("user.json")
+		val json = readFromAssets("barang.json")
 		val list = Gson().fromJson(json, Array<ProductModel>::class.java).toMutableList()
 		cashierListLiveData.postValue(list)
 	}

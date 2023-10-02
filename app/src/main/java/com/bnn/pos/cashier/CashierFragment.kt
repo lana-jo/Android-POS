@@ -9,10 +9,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import com.bnn.pos.admindashboard.AdminDashboardActivity
-import com.bnn.pos.admindashboard.ProductAdapter
+import com.bnn.pos.product.ProductAdapter
 import com.bnn.pos.admindashboard.AdminDashboardViewModel
 import com.bnn.pos.databinding.FragmentCashierBinding
 import com.bnn.pos.model.OutletModel
+import com.bnn.pos.model.ProductModel
 
 class CashierFragment : Fragment() {
 
@@ -33,10 +34,14 @@ class CashierFragment : Fragment() {
 		dashboardViewModel= ViewModelProvider(requireActivity())[AdminDashboardViewModel::class.java]
 		viewModel = ViewModelProvider(requireActivity())[CashierViewModel::class.java]
 
-		productAdapter = ProductAdapter()
+		productAdapter = ProductAdapter(object : ProductAdapter.ProductListener{
+			override fun onClick(model: ProductModel) {
+				Log.d("dataProduct", "onClick: "+model.id)
+			}
+		})
 
 		binding.cashierListProduct.adapter = productAdapter
-		binding.cashierListProduct.layoutManager = GridLayoutManager(requireActivity(), 4, GridLayoutManager.VERTICAL, false )
+		binding.cashierListProduct.layoutManager = GridLayoutManager(requireActivity(), 3, GridLayoutManager.VERTICAL, false )
 		binding.cashierListProduct.setHasFixedSize(true)
 
 		return binding.root

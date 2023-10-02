@@ -5,14 +5,13 @@ import java.io.Serializable
 
 class RequestModel: Serializable {
 
-//	@SerializedName('action')
 	var action: String? = null
 
-//	@SerializedName('data')
 	var data : String? = null
 
 	var message : String? = null
-
-
+	override fun toString(): String {
+		return "RequestModel(action=$action, data=$data, message=$message)"
+	}
 
 }
